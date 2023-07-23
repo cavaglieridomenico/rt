@@ -19,6 +19,7 @@ function App() {
         gap: "2rem",
         margin: "0 auto",
         alignItems: "center",
+        backgroundColor: "yellow",
       }}
     >
       <div style={{ fontSize: "2rem", textAlign: "center" }}>Lose Win</div>
