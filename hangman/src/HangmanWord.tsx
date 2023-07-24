@@ -1,4 +1,4 @@
-export const HangmanWord = () => {
+const HangmanWord = () => {
   const word = "test";
   const guessedLetter: string[] = [];
 
@@ -30,3 +30,5 @@ export const HangmanWord = () => {
     </div>
   );
 };
+
+export default HangmanWord;

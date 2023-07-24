@@ -1,4 +1,4 @@
-export const HangmanDrawing = () => {
+const HangmanDrawing = () => {
   const HEAD = (
     <div
       style={{
@@ -80,7 +80,7 @@ export const HangmanDrawing = () => {
         position: "absolute",
         top: "210px",
         right: 0,
-        rotate: "60deg",
+        rotate: "-60deg",
         transformOrigin: "right bottom",
       }}
     ></div>
@@ -126,3 +126,5 @@ export const HangmanDrawing = () => {
     </div>
   );
 };
+
+export default HangmanDrawing;
