@@ -40,7 +40,7 @@ const Keyboad = () => {
     >
       {KEYS.map((character, index) => {
         return (
-          <button key={index} className={style["btn"]}>
+          <button key={index} className={`${style.btn}`}>
             {character}
           </button>
         );

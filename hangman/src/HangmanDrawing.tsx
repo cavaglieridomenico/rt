@@ -1,4 +1,8 @@
-const HangmanDrawing = () => {
+type HangmanDrawingProps = {
+  numberOfGuesses?: number;
+};
+
+const HangmanDrawing = ({ numberOfGuesses }: HangmanDrawingProps) => {
   const HEAD = (
     <div
       style={{
@@ -85,15 +89,13 @@ const HangmanDrawing = () => {
       }}
     ></div>
   );
+  console.log(numberOfGuesses);
+
+  const BODY_PARTS = [HEAD, BODY, RIGHT_ARM, LEFT_ARM, RIGHT_LEG, LEFT_LEG];
 
   return (
     <div style={{ position: "relative" }}>
-      {HEAD}
-      {BODY}
-      {RIGHT_ARM}
-      {LEFT_ARM}
-      {RIGHT_LEG}
-      {LEFT_LEG}
+      {BODY_PARTS.slice(0, numberOfGuesses)}
       <div
         style={{
           height: "50px",

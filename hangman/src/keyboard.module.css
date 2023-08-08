@@ -10,7 +10,16 @@
   color: black;
 }
 
-.btn:focus,
-.btn:hover {
+.btn.active {
+  background-color: hsl(200, 100%, 50%);
+  color: white;
+}
+
+.btn.inactive {
+  opacity: 0.3;
+}
+
+.btn:focus:not(:disabled),
+.btn:hover:not(:disabled) {
   background-color: hsl(200, 100%, 75%);
 }
