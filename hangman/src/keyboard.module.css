@@ -6,7 +6,7 @@
   text-transform: uppercase;
   padding: 0.5rem;
   font-weight: bold;
-  cursor: pointer;
+  /* cursor: pointer; */
   color: black;
 }
 
@@ -22,4 +22,5 @@
 .btn:focus:not(:disabled),
 .btn:hover:not(:disabled) {
   background-color: hsl(200, 100%, 75%);
+  cursor: pointer;
 }

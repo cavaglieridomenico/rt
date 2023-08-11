@@ -14,6 +14,7 @@ const HangmanDrawing = ({ numberOfGuesses }: HangmanDrawingProps) => {
         top: "50px",
         right: "-30px",
       }}
+      key={"head"}
     ></div>
   );
 
@@ -27,6 +28,7 @@ const HangmanDrawing = ({ numberOfGuesses }: HangmanDrawingProps) => {
         top: "120px",
         right: 0,
       }}
+      key={"body"}
     ></div>
   );
 
@@ -42,6 +44,7 @@ const HangmanDrawing = ({ numberOfGuesses }: HangmanDrawingProps) => {
         rotate: "-30deg",
         transformOrigin: "left bottom",
       }}
+      key={"right_arm"}
     ></div>
   );
 
@@ -57,6 +60,7 @@ const HangmanDrawing = ({ numberOfGuesses }: HangmanDrawingProps) => {
         rotate: "30deg",
         transformOrigin: "right bottom",
       }}
+      key={"left_arm"}
     ></div>
   );
 
@@ -72,6 +76,7 @@ const HangmanDrawing = ({ numberOfGuesses }: HangmanDrawingProps) => {
         rotate: "60deg",
         transformOrigin: "left bottom",
       }}
+      key={"right_leg"}
     ></div>
   );
 
@@ -87,6 +92,7 @@ const HangmanDrawing = ({ numberOfGuesses }: HangmanDrawingProps) => {
         rotate: "-60deg",
         transformOrigin: "right bottom",
       }}
+      key={"left_leg"}
     ></div>
   );
   console.log(numberOfGuesses);

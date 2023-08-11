@@ -1,6 +1,16 @@
 import style from "./keyboard.module.css";
 
-const Keyboad = () => {
+type KeyboardProps = {
+  activeLetters: string[];
+  inactiveLetters: string[];
+  addGuessedLetter: (letter: string) => void;
+};
+
+const Keyboad = ({
+  activeLetters,
+  inactiveLetters,
+  addGuessedLetter,
+}: KeyboardProps) => {
   const KEYS = [
     "a",
     "b",
@@ -39,8 +49,18 @@ const Keyboad = () => {
       }}
     >
       {KEYS.map((character, index) => {
+        const isActive = activeLetters.includes(character);
+        const isInactive = inactiveLetters.includes(character);
+
         return (
-          <button key={index} className={`${style.btn}`}>
+          <button
+            key={index}
+            className={`${style.btn} ${isActive && style.active} ${
+              isInactive && style.inactive
+            }`}
+            disabled={isActive || isInactive}
+            onClick={() => addGuessedLetter(character)}
+          >
             {character}
           </button>
         );
