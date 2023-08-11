@@ -4,12 +4,14 @@ type KeyboardProps = {
   activeLetters: string[];
   inactiveLetters: string[];
   addGuessedLetter: (letter: string) => void;
+  disabled: boolean;
 };
 
 const Keyboad = ({
   activeLetters,
   inactiveLetters,
   addGuessedLetter,
+  disabled = false,
 }: KeyboardProps) => {
   const KEYS = [
     "a",
@@ -58,7 +60,7 @@ const Keyboad = ({
             className={`${style.btn} ${isActive && style.active} ${
               isInactive && style.inactive
             }`}
-            disabled={isActive || isInactive}
+            disabled={isActive || isInactive || disabled}
             onClick={() => addGuessedLetter(character)}
           >
             {character}
