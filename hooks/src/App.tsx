@@ -1,5 +1,13 @@
+import "./App.css";
+import UseStateExample from "./components/UseStateExample";
+
 const App = () => {
-  return <>Hooks!</>;
+  return (
+    <>
+      <UseStateExample />
+      <hr />
+    </>
+  );
 };
 
 export default App;
