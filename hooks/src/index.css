@@ -3,3 +3,7 @@ button.usestate-example {
   height: 3rem;
   margin: 0.5rem;
 }
+
+button.useeffect-example {
+  height: 2rem;
+}
