@@ -1,5 +1,6 @@
 import UseStateExample from "./components/UseStateExample";
 import UseEffectExample from "./components/UseEffectExample";
+import UseRefExample from "./components/UseRefExample";
 
 const App = () => {
   return (
@@ -7,6 +8,8 @@ const App = () => {
       <UseStateExample />
       <hr />
       <UseEffectExample />
+      <hr />
+      <UseRefExample />
     </>
   );
 };

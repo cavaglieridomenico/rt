@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const UseEffectExample = () => {
-  const [resourceType, setResourceType] = useState<string>("posts");
+  const [resourceType, setResourceType] = useState<string>("");
   const [items, setItems] = useState<[]>([]);
   useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/${resourceType}`)
