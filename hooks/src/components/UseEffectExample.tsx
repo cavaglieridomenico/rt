@@ -4,6 +4,7 @@ const UseEffectExample = () => {
   const [resourceType, setResourceType] = useState<string>("");
   const [items, setItems] = useState<[]>([]);
   useEffect(() => {
+    if (!resourceType) return;
     fetch(`https://jsonplaceholder.typicode.com/${resourceType}`)
       .then((response) => response.json())
       .then((json) => setItems(json));
