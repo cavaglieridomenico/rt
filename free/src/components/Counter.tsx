@@ -5,7 +5,7 @@ const Counter = () => {
   const [counterValue, setCounterValue] = useState(0);
 
   useEffect(() => {
-    console.log("Render");
+    console.log("Counter render");
   });
 
   useEffect(() => {
