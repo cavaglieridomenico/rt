@@ -1,10 +1,17 @@
-import { useState, useEffect, memo } from "react";
+import { useState, useEffect, useRef } from "react";
 import ValuePrint from "./ValuePrint";
-import { ValuePrintProps } from "./ValuePrint";
 
 const Counter = () => {
   const [counterValue, setCounterValue] = useState(0);
   const [automaticCounterValue, setAutomaticCounterValue] = useState(0);
+  const [showText, setShowText] = useState(false);
+  const startDate = useRef<string | null>(null);
+  let time = "nothing";
+  const handleStartTime = () => {
+    time = new Date().toLocaleTimeString();
+    startDate.current = new Date().toLocaleTimeString();
+    setShowText(true);
+  };
 
   useEffect(() => {
     console.log("Counter rendering");
@@ -17,7 +24,7 @@ const Counter = () => {
   useEffect(() => {
     const interval = setInterval(
       () => setAutomaticCounterValue(automaticCounterValue + 1),
-      3000
+      1000
     );
     return () => {
       clearInterval(interval);
@@ -26,6 +33,14 @@ const Counter = () => {
 
   return (
     <>
+      <div style={{ marginBottom: ".5rem" }}>
+        <button onClick={handleStartTime}>Start experiment</button>
+        {showText && (
+          <span style={{ margin: ".5rem" }}>
+            This experiment began at {startDate.current} or {time}
+          </span>
+        )}
+      </div>
       <button onClick={() => setCounterValue(counterValue - 1)}>-</button>
       <span style={{ margin: ".5rem" }}>{automaticCounterValue}</span>
       <button onClick={() => setCounterValue(counterValue + 1)}>+</button>
