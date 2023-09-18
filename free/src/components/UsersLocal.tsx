@@ -36,7 +36,7 @@ const UsersLocal = () => {
   };
 
   useEffect(() => {
-    console.log("UsersLocal render");
+    console.log("UsersLocal rendering");
   });
 
   const userRendering = (userList: []) => {

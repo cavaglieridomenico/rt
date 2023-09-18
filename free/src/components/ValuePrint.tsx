@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, memo } from "react";
 
-interface ValuePrintProps {
+export interface ValuePrintProps {
   value: number;
 }
 
@@ -12,4 +12,4 @@ const ValuePrint = ({ value }: ValuePrintProps) => {
   return <>{value}</>;
 };
 
-export default ValuePrint;
+export default memo(ValuePrint);

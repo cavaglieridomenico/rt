@@ -40,6 +40,10 @@ const Users = () => {
     getUsers2();
   }, []);
 
+  useEffect(() => {
+    console.log("Users rendering");
+  });
+
   const usersRendering = (userList: User[]) => {
     {
       return userList.map((user: User, index: number) => (
