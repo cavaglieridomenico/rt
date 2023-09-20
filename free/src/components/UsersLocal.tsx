@@ -53,7 +53,8 @@ const UsersLocal = () => {
   return (
     <>
       <div>
-        <div>
+        <span>UserLocal via import module</span>
+        <div style={{ marginTop: ".5rem" }}>
           <button style={{ margin: ".2rem" }} onClick={handleUsersLocal1}>
             Load UsersLocal
           </button>

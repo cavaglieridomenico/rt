@@ -57,7 +57,8 @@ const Users = () => {
 
   return (
     <div>
-      <div style={{ marginBottom: ".5rem" }}>{usersRendering(users)}</div>
+      <span>Users via HTTP</span>
+      <div style={{ margin: ".5rem 0" }}>{usersRendering(users)}</div>
       <div>{usersRendering(users2)}</div>
     </div>
   );
