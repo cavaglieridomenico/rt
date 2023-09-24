@@ -4,6 +4,10 @@ export const AppContext = createContext<any>(null);
 
 export const AppContextProvider = ({ children }: any) => {
   const [contextValue, setContextValue] = useState({
+    todoList: [
+      { id: 1, item: "study performance" },
+      { id: 2, item: "study React" },
+    ],
     users: [{ name: "Max", surname: "Cavalera" }],
     counter: 0,
   });
