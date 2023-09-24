@@ -1,9 +1,13 @@
 import TodoListDisplay from "./TodoListDisplay";
 import TodoListForm from "./TodoListForm";
 import { useAppContext } from "../context/context";
+import { useEffect } from "react";
 
 const TodoList = () => {
   const { contextValue, setContextValue } = useAppContext();
+  useEffect(() => {
+    console.log("TodoList rendering");
+  });
   const handleSubmit = (event: any, inputValue: any) => {
     event.preventDefault();
     console.log(inputValue);
@@ -25,6 +29,7 @@ const TodoList = () => {
 
   return (
     <div>
+      <span style={{ fontWeight: "bold" }}>Todo list via context</span>
       <TodoListForm handleSubmit={handleSubmit} />
       <TodoListDisplay deleteItem={deleteItem} />
     </div>

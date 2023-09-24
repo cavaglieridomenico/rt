@@ -33,7 +33,9 @@ const Counter = () => {
 
   return (
     <>
-      <span>Counter with useState / CounterDisplay with Memo</span>
+      <span style={{ fontWeight: "bold" }}>
+        Counter with useState / CounterDisplay with Memo
+      </span>
       <div style={{ margin: ".5rem 0" }}>
         <button onClick={handleStartTime}>Start experiment</button>
         {showText && (

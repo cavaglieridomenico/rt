@@ -2,14 +2,16 @@ import { useAppContext } from "../context/context";
 
 import { useEffect } from "react";
 const Counter2 = () => {
-  const { contextValue, setContextValue } = useAppContext();
+  const { setContextValue } = useAppContext();
 
   useEffect(() => {
-    console.log("Counte2 rendering");
+    console.log("Counter2 rendering");
   });
   return (
     <div>
-      <span>Counter2 with useState via context</span>
+      <span style={{ fontWeight: "bold" }}>
+        Counter2 with useState via context
+      </span>
       <div>
         <button
           style={{ margin: ".5rem" }}

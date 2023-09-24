@@ -1,7 +1,13 @@
+import { useEffect } from "react";
 import { useAppContext } from "../context/context";
 
 const TodoListDisplay = ({ deleteItem }: any) => {
   const { contextValue } = useAppContext();
+
+  useEffect(() => {
+    console.log("TodoListDisplay rendering");
+  });
+
   return (
     <div>
       {contextValue?.todoList?.map((item: any) => {
