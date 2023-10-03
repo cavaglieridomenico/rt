@@ -14,8 +14,12 @@ export const Appcontext2Provider = ({ children }: any) => {
     dispatch({ type: "INCREMENT", payload: 1 });
   };
 
+  const handleDecrement = () => {
+    dispatch({ type: "DECREMENT", payload: 1 });
+  };
+
   return (
-    <AppContext2.Provider value={{ state, handleIncrement }}>
+    <AppContext2.Provider value={{ state, handleIncrement, handleDecrement }}>
       {children}
     </AppContext2.Provider>
   );
