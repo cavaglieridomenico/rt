@@ -10,7 +10,7 @@ const TodoListDisplay = ({ deleteItem }: any) => {
 
   return (
     <div>
-      {contextValue?.todoList?.map((item: any) => {
+      {contextValue?.todoList?.map((item: any, index: number) => {
         return (
           <div
             style={{
@@ -18,6 +18,7 @@ const TodoListDisplay = ({ deleteItem }: any) => {
               display: "flex",
               justifyContent: "space-between",
             }}
+            key={index}
           >
             <span>{item.item}</span>
             <span

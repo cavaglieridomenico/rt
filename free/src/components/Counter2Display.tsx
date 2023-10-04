@@ -1,6 +1,5 @@
 // import { useContext } from "react";
 // import { AppContext } from "../context/context";
-import { memo } from "react";
 import { useAppContext } from "../context/context";
 
 const Counter2Display = () => {

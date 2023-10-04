@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
-import CounterDisplay from "./CounterDisplay";
+import Counter1Display from "./Counter1Display";
 
-const Counter = () => {
+const Counter1 = () => {
   const [counterValue, setCounterValue] = useState(0);
   const [automaticCounterValue, setAutomaticCounterValue] = useState(0);
   const [showText, setShowText] = useState(false);
@@ -13,12 +13,10 @@ const Counter = () => {
     setShowText(true);
   };
 
-  useEffect(() => {
-    console.log("Counter rendering");
-  });
+  console.log("Counter1 rendering");
 
   useEffect(() => {
-    console.log("Counter value: ", counterValue);
+    console.log("Counter1 value: ", counterValue);
   }, [counterValue]);
 
   // useEffect(() => {
@@ -34,7 +32,7 @@ const Counter = () => {
   return (
     <>
       <span style={{ fontWeight: "bold" }}>
-        Counter with useState / CounterDisplay with Memo
+        Counter1 with useState / CounterDisplay with Memo
       </span>
       <div style={{ margin: ".5rem 0" }}>
         <button onClick={handleStartTime}>Start experiment</button>
@@ -48,10 +46,10 @@ const Counter = () => {
       <span style={{ margin: ".5rem" }}>{automaticCounterValue}</span>
       <button onClick={() => setCounterValue(counterValue + 1)}>+</button>
       <div style={{ margin: "0 5px" }}>
-        <CounterDisplay value={counterValue} />
+        <Counter1Display value={counterValue} />
       </div>
     </>
   );
 };
 
-export default Counter;
+export default Counter1;

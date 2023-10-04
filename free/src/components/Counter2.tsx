@@ -1,12 +1,10 @@
 import { useAppContext } from "../context/context";
 
-import { useEffect } from "react";
 const Counter2 = () => {
   const { setContextValue } = useAppContext();
 
-  useEffect(() => {
-    console.log("Counter2 rendering");
-  });
+  console.log("Counter2 rendering");
+
   return (
     <div>
       <span style={{ fontWeight: "bold" }}>

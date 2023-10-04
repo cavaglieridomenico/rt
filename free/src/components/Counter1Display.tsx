@@ -1,13 +1,9 @@
-import { useEffect, memo } from "react";
-
 interface CounterDisplayProps {
   value: number;
 }
 
 const CounterDisplay = ({ value }: CounterDisplayProps) => {
-  useEffect(() => {
-    console.log("CounterDisplay rendering");
-  });
+  console.log("Counter1Display rendering");
 
   return <>{value}</>;
 };

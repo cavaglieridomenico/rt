@@ -18,6 +18,9 @@ export const Appcontext2Provider = ({ children }: any) => {
     dispatch({ type: "DECREMENT", payload: 1 });
   };
 
+  console.log("Context2 rendering");
+  console.log(state);
+
   return (
     <AppContext2.Provider value={{ state, handleIncrement, handleDecrement }}>
       {children}

@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState } from "react";
 
 export const AppContext = createContext<any>(null);
 
@@ -12,10 +12,8 @@ export const AppContextProvider = ({ children }: any) => {
     counter: 0,
   });
 
-  useEffect(() => {
-    console.log("Context rendering");
-    console.log(contextValue);
-  });
+  console.log("Context1 rendering");
+  console.log(contextValue);
 
   return (
     <AppContext.Provider value={{ contextValue, setContextValue }}>

@@ -1,6 +1,6 @@
 import "./App.css";
 import Users from "./components/Users";
-import Counter from "./components/Counter";
+import Counter1 from "./components/Counter1";
 import UsersLocal from "./components/UsersLocal";
 import { AppContextProvider } from "./context/context";
 import { Appcontext2Provider } from "./context/context2";
@@ -25,7 +25,7 @@ function App() {
           <hr />
           <Users />
           <hr />
-          <Counter />
+          <Counter1 />
           <hr />
           <UsersLocal />
         </AppContextProvider>
