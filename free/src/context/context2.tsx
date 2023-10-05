@@ -1,10 +1,21 @@
 import { createContext, useContext, useReducer } from "react";
 import { reducer } from "./redsucer";
+import { ToDoListItem } from "../typings/todo-list";
 
 const AppContext2 = createContext<any>(null);
 
-const initialState = {
+export interface ReducerInitialState {
+  counter: number;
+  todoList: ToDoListItem[];
+}
+
+const initialState: ReducerInitialState = {
   counter: 0,
+  todoList: [
+    { id: 1, itemList: "Study React" },
+    { id: 2, itemList: "Study JS" },
+    { id: 3, itemList: "Study CSS" },
+  ],
 };
 
 export const Appcontext2Provider = ({ children }: any) => {

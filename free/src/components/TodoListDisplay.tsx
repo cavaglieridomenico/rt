@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useAppContext } from "../context/context";
+import { useAppContext } from "../context/context1";
 
 const TodoListDisplay = ({ deleteItem }: any) => {
   const { contextValue } = useAppContext();

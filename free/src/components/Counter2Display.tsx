@@ -1,6 +1,6 @@
 // import { useContext } from "react";
 // import { AppContext } from "../context/context";
-import { useAppContext } from "../context/context";
+import { useAppContext } from "../context/context1";
 
 const Counter2Display = () => {
   const { contextValue } = useAppContext();
