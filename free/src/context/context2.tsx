@@ -1,15 +1,10 @@
 import { createContext, useContext, useReducer } from "react";
 import { reducer } from "./redsucer";
-import { ToDoListItem } from "../typings/todo-list";
+import type { Context2State } from "../typings/context";
 
 const AppContext2 = createContext<any>(null);
 
-export interface ReducerInitialState {
-  counter: number;
-  todoList: ToDoListItem[];
-}
-
-const initialState: ReducerInitialState = {
+const initialState: Context2State = {
   counter: 0,
   todoList: [
     { id: 1, itemList: "Study React" },
@@ -33,7 +28,9 @@ export const Appcontext2Provider = ({ children }: any) => {
   console.log(state);
 
   return (
-    <AppContext2.Provider value={{ state, handleIncrement, handleDecrement }}>
+    <AppContext2.Provider
+      value={{ ...state, handleIncrement, handleDecrement }}
+    >
       {children}
     </AppContext2.Provider>
   );
