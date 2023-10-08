@@ -1,13 +1,21 @@
-import type { ToDoListDisplayProps, ToDoListItem } from "../typings/todo-list";
-import "../style/todo-list.css";
+import type { ToDoListDisplayProps, TodoListItem } from "../typings/todo-list";
+import style from "../style/todo-list.module.css";
 
-const TodoListLDisplay2 = ({ todoList }: ToDoListDisplayProps) => {
+const TodoListLDisplay2 = ({
+  todoList,
+  removeTodoItem,
+}: ToDoListDisplayProps) => {
   return (
     <div>
-      {todoList?.map((itemList: ToDoListItem) => (
-        <div className="listItem" key={itemList.id}>
+      {todoList?.map((itemList: TodoListItem) => (
+        <div className={style.listItem} key={itemList.id}>
           <span style={{ marginRight: "2rem" }}>{itemList.itemList}</span>
-          <span>x</span>
+          <span
+            className={style.remove}
+            onClick={() => removeTodoItem(itemList.id)}
+          >
+            x
+          </span>
         </div>
       ))}
     </div>

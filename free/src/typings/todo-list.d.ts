@@ -1,8 +1,9 @@
 export interface ToDoListDisplayProps {
-  todoList: ToDoListItem[];
+  todoList: TodoListItem[];
+  removeTodoItem: (id: string | number) => void;
 }
 
-interface ToDoListItem {
+interface TodoListItem {
   id: string | number;
   itemList: string;
 }

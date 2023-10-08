@@ -5,4 +5,7 @@
   margin: 0.3rem 0;
   width: 12rem;
   border: solid 1px;
+  .remove:hover {
+    cursor: pointer;
+  }
 }
