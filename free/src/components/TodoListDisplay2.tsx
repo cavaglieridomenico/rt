@@ -9,7 +9,7 @@ const TodoListLDisplay2 = ({
     <div>
       {todoList?.map((itemList: TodoListItem) => (
         <div className={style.listItem} key={itemList.id}>
-          <span style={{ marginRight: "2rem" }}>{itemList.itemList}</span>
+          <span style={{ marginRight: "2rem" }}>{itemList.itemValue}</span>
           <span
             className={style.remove}
             onClick={() => removeTodoItem(itemList.id)}

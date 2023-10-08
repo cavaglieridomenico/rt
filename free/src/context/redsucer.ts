@@ -14,6 +14,11 @@ export const reducer = (state: Context2State, action: Context2Dispatch) => {
         ...state,
         counter: state.counter - payload,
       };
+    case "ADD_ITEM_TODO_LIST":
+      return {
+        ...state,
+        todoList: [...state.todoList, payload],
+      };
     case "REMOVE_ITEM_TODO_LIST":
       return {
         ...state,
@@ -21,7 +26,11 @@ export const reducer = (state: Context2State, action: Context2Dispatch) => {
           (itemList: TodoListItem) => itemList.id !== payload
         ),
       };
-    default:
-      return state;
+    // default:
+    //   return state;
+    // otherwise:
+    default: {
+      throw Error("Unknown action: " + type);
+    }
   }
 };

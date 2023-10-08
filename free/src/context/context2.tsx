@@ -5,15 +5,16 @@ import type {
   Context2ProviderProps,
   Context2State,
 } from "../typings/context";
+import { TodoListItem } from "../typings/todo-list";
 
 export const AppContext2 = createContext<Context2Value>({} as Context2Value);
 
 const initialState: Context2State = {
   counter: 0,
   todoList: [
-    { id: 1, itemList: "Study React" },
-    { id: 2, itemList: "Study JS" },
-    { id: 3, itemList: "Study CSS" },
+    { id: 1, itemValue: "Study React" },
+    { id: 2, itemValue: "Study JS" },
+    { id: 3, itemValue: "Study CSS" },
   ],
 };
 
@@ -28,6 +29,13 @@ export const Appcontext2Provider = ({ children }: Context2ProviderProps) => {
     dispatch({ type: "DECREMENT", payload: 1 });
   };
 
+  const addTodoItem = (valueInput: TodoListItem) => {
+    dispatch({
+      type: "ADD_ITEM_TODO_LIST",
+      payload: valueInput,
+    });
+  };
+
   const removeTodoItem = (id: string | number) => {
     dispatch({
       type: "REMOVE_ITEM_TODO_LIST",
@@ -40,7 +48,13 @@ export const Appcontext2Provider = ({ children }: Context2ProviderProps) => {
 
   return (
     <AppContext2.Provider
-      value={{ ...state, handleIncrement, handleDecrement, removeTodoItem }}
+      value={{
+        ...state,
+        handleIncrement,
+        handleDecrement,
+        addTodoItem,
+        removeTodoItem,
+      }}
     >
       {children}
     </AppContext2.Provider>
