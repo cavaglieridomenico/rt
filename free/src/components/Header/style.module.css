@@ -1,0 +1,15 @@
+.header {
+  border-bottom: 2px solid;
+  background-color: var(--secondaryColor);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navItem {
+  cursor: pointer;
+  display: inline;
+  margin-right: 0.5rem;
+}
+:last-child {
+  margin-right: 0;
+}

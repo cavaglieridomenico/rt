@@ -5,6 +5,8 @@ import { Appcontext2Provider } from "./context/context2";
 import Counters from "./pages/Counters";
 import Users from "./pages/Users";
 import NotFound from "./pages/NotFound";
+import Home from "./pages/Home";
+import Layout from "./components/Layout";
 // import Users from "./components/Users";
 // import Counter1 from "./components/Counter1";
 // import UsersLocal from "./components/UsersLocal";
@@ -21,9 +23,12 @@ function App() {
       <Appcontext2Provider>
         <AppContext1Provider>
           <Routes>
-            <Route path="counters" element={<Counters />} />
-            <Route path="users" element={<Users />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="counters" element={<Counters />} />
+              <Route path="users" element={<Users />} />
+              <Route path="*" element={<NotFound />} />
+            </Route>
           </Routes>
           {/* <TodoList2 />
           <hr />
