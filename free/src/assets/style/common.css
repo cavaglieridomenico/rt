@@ -11,9 +11,26 @@ body {
   margin: 0;
 }
 .container-main {
-  background-color: var(--primaryColor);
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.page {
+  background-color: var(--primaryColor);
+  height: 100%;
+  padding: var(--mainPadding);
+}
+
+.header-global,
+.footer-global {
+  background-color: var(--secondaryColor);
+  padding: var(--mainPadding);
+}
+
+.single-block {
+  background-color: var(--secondaryColor);
+  padding: 0.2rem;
+  max-width: 30rem;
 }

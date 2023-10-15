@@ -1,6 +1,5 @@
 .header {
   border-bottom: 2px solid;
-  background-color: var(--secondaryColor);
   display: flex;
   justify-content: flex-end;
 }

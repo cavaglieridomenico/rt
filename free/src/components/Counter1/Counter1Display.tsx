@@ -1,3 +1,5 @@
+import { memo } from "react";
+
 interface CounterDisplayProps {
   value: number;
 }
@@ -8,4 +10,4 @@ const CounterDisplay = ({ value }: CounterDisplayProps) => {
   return <>{value}</>;
 };
 
-export default CounterDisplay;
+export default memo(CounterDisplay);

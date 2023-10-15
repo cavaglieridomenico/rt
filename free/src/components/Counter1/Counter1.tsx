@@ -6,7 +6,7 @@ const Counter1 = () => {
   const [automaticCounterValue, setAutomaticCounterValue] = useState(0);
   const [showText, setShowText] = useState(false);
   const startDate = useRef<string | null>(null);
-  let time = "nothing";
+  let time = "init";
   const handleStartTime = () => {
     time = new Date().toLocaleTimeString();
     startDate.current = new Date().toLocaleTimeString();
@@ -19,6 +19,7 @@ const Counter1 = () => {
     console.log("Counter1 value: ", counterValue);
   }, [counterValue]);
 
+  //Uncomment to start the counter
   // useEffect(() => {
   //   const interval = setInterval(
   //     () => setAutomaticCounterValue(automaticCounterValue + 1),
@@ -30,25 +31,44 @@ const Counter1 = () => {
   // });
 
   return (
-    <>
+    <div className="single-block">
       <span style={{ fontWeight: "bold" }}>
         Counter1 with useState / CounterDisplay with Memo
       </span>
+      <ul>
+        <li>- memo avoids re-rendering when the parent re-renders</li>
+        <li>
+          - useRef maintains the value between re-renders, a variable does not
+        </li>
+      </ul>
       <div style={{ margin: ".5rem 0" }}>
-        <button onClick={handleStartTime}>Start experiment</button>
+        <button style={{ padding: ".1rem" }} onClick={handleStartTime}>
+          Show times
+        </button>
         {showText && (
           <span style={{ margin: ".5rem" }}>
-            This experiment began at {startDate.current} or {time}
+            Time in useRef: {startDate.current} / Time in variable: {time}
           </span>
         )}
       </div>
-      <button onClick={() => setCounterValue(counterValue - 1)}>-</button>
-      <span style={{ margin: ".5rem" }}>{automaticCounterValue}</span>
-      <button onClick={() => setCounterValue(counterValue + 1)}>+</button>
-      <div style={{ margin: "0 5px" }}>
+      <div style={{ margin: ".5rem" }}>{automaticCounterValue}</div>
+      <button
+        style={{ width: "1.5rem", height: "1.5rem" }}
+        onClick={() => setCounterValue(counterValue - 1)}
+      >
+        -
+      </button>
+      <span style={{ margin: "0 .2rem" }}>
         <Counter1Display value={counterValue} />
-      </div>
-    </>
+      </span>
+      <button
+        style={{ width: "1.5rem", height: "1.5rem", marginRight: ".5rem" }}
+        onClick={() => setCounterValue(counterValue + 1)}
+      >
+        +
+      </button>
+      <div></div>
+    </div>
   );
 };
 

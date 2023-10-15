@@ -1,5 +1,5 @@
 const Users = () => {
-  return <>Users.tsx</>;
+  return <div className="page">Users.tsx</div>;
 };
 
 export default Users;

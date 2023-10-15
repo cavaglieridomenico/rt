@@ -1,7 +1,5 @@
 .footer {
-  background-color: aqua;
   border-top: 2px solid;
   display: flex;
   justify-content: flex-end;
-  /* padding: var(--mainPadding); */
 }

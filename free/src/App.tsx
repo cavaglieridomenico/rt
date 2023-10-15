@@ -1,7 +1,7 @@
-import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { AppContext1Provider } from "./context/context1";
 import { Appcontext2Provider } from "./context/context2";
+import "./App.css";
 import Counters from "./pages/Counters";
 import Users from "./pages/Users";
 import NotFound from "./pages/NotFound";
