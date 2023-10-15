@@ -8,11 +8,18 @@ const Counter2 = () => {
   return (
     <div>
       <span style={{ fontWeight: "bold" }}>
-        Counter2 with useState via context
+        Counter2 with useState via context1
       </span>
+      <ul>
+        <li>
+          - Changing the state within the context re-renders the context and the
+          components attached to it
+        </li>
+      </ul>
       <div>
         <button
-          style={{ margin: ".5rem" }}
+          className="counter-button"
+          style={{ margin: ".5rem .5rem .5rem 0" }}
           onClick={() =>
             setContextValue((prevState: any) => ({
               ...prevState,
@@ -23,6 +30,7 @@ const Counter2 = () => {
           -
         </button>
         <button
+          className="counter-button"
           onClick={() =>
             setContextValue((prevState: any) => ({
               ...prevState,

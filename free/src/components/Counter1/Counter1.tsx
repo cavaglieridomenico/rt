@@ -11,6 +11,7 @@ const Counter1 = () => {
     time = new Date().toLocaleTimeString();
     startDate.current = new Date().toLocaleTimeString();
     setShowText(true);
+    setTimeout(() => setShowText(false), 4000);
   };
 
   console.log("Counter1 rendering");
@@ -51,9 +52,14 @@ const Counter1 = () => {
           </span>
         )}
       </div>
-      <div style={{ margin: ".5rem" }}>{automaticCounterValue}</div>
+      <div style={{ margin: ".5rem" }}>
+        {automaticCounterValue}{" "}
+        <span style={{ marginLeft: ".3rem" }}>
+          //uncomment the code to start the timer...
+        </span>
+      </div>
       <button
-        style={{ width: "1.5rem", height: "1.5rem" }}
+        className="counter-button"
         onClick={() => setCounterValue(counterValue - 1)}
       >
         -
@@ -62,7 +68,7 @@ const Counter1 = () => {
         <Counter1Display value={counterValue} />
       </span>
       <button
-        style={{ width: "1.5rem", height: "1.5rem", marginRight: ".5rem" }}
+        className="counter-button"
         onClick={() => setCounterValue(counterValue + 1)}
       >
         +
