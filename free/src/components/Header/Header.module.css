@@ -9,6 +9,6 @@
   display: inline;
   margin-right: 0.5rem;
 }
-:last-child {
+.navItem:last-child {
   margin-right: 0;
 }
