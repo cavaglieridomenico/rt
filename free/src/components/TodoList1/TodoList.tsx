@@ -1,6 +1,6 @@
 import TodoListDisplay from "./TodoListDisplay";
 import TodoListForm from "./TodoListForm";
-import { useAppContext } from "../context/context1";
+import { useAppContext } from "../../context/context1";
 import { useEffect } from "react";
 
 const TodoList = () => {

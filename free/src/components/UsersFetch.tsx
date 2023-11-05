@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { User } from "../typings/users";
 
-const UserList = () => {
+const UsersFetch = () => {
   const [users, setUsers] = useState<User[]>([]);
   const [users2, setUsers2] = useState<User[]>([]);
 
@@ -66,4 +66,4 @@ const UserList = () => {
   );
 };
 
-export default UserList;
+export default UsersFetch;

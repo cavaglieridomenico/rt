@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TodoListForm2Props } from "../typings/todo-list";
+import { TodoListForm2Props } from "../../typings/todo-list";
 
 const TodoListForm2 = ({ addTodoItem, todoList }: TodoListForm2Props) => {
   const [inputValue, setInputValue] = useState("");

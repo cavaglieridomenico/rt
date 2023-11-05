@@ -2,11 +2,12 @@ import { Routes, Route } from "react-router-dom";
 import { AppContext1Provider } from "./context/context1";
 import { Appcontext2Provider } from "./context/context2";
 import "./App.css";
+import Layout from "./components/Layout";
+import Home from "./pages/Home";
 import Counters from "./pages/Counters";
 import Users from "./pages/Users";
+import TodoLists from "./pages/TodoLists";
 import NotFound from "./pages/NotFound";
-import Home from "./pages/Home";
-import Layout from "./components/Layout";
 // import Users from "./components/Users";
 // import Counter1 from "./components/Counter1";
 // import UsersLocal from "./components/UsersLocal";
@@ -27,21 +28,10 @@ function App() {
               <Route index element={<Home />} />
               <Route path="counters" element={<Counters />} />
               <Route path="users" element={<Users />} />
+              <Route path="todolists" element={<TodoLists />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
-          {/* <TodoList2 />
-          <hr />
-          <TodoList />
-          <hr />
-          <Counter2 />
-          <Display />
-          <hr />
-          <Users />
-          <hr />
-          <Counter1 />
-          <hr />
-          <UsersLocal /> */}
         </AppContext1Provider>
       </Appcontext2Provider>
     </>

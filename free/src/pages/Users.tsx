@@ -1,11 +1,11 @@
-import UserList from "../components/UserList";
+import UsersFetch from "../components/UsersFetch";
 import UsersLocal from "../components/UsersLocal";
 
 const Users = () => {
   return (
     <div className="page">
       <div className="single-block">
-        <UserList />
+        <UsersFetch />
       </div>
       <div className="single-block">
         <UsersLocal />

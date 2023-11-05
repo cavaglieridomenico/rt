@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useAppContext } from "../context/context1";
+import { useAppContext } from "../../context/context1";
 
 const TodoListForm = ({ handleSubmit }: any) => {
   const [inputValue, setInputValue] = useState("");

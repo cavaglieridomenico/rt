@@ -4,11 +4,20 @@
   justify-content: flex-end;
 }
 
+.listSeparator {
+  display: inline-block;
+  width: 0.2rem;
+  height: 1.1rem;
+  background-color: black;
+  margin: 0 0.1rem;
+}
+
 .navItem {
   cursor: pointer;
   display: inline;
-  margin-right: 0.5rem;
+  margin: 0 0.5rem;
 }
+
 .navItem:last-child {
   margin-right: 0;
 }
