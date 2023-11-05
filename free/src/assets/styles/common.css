@@ -17,6 +17,14 @@ ul {
   list-style: none;
 }
 
+.mt-01 {
+  margin-top: var(--mt01);
+}
+
+.ml-01 {
+  margin-left: var(--ml01);
+}
+
 .container-main {
   height: 100vh;
   display: flex;
@@ -55,4 +63,8 @@ ul {
 .counter-button {
   width: 1.5rem;
   height: 1.5rem;
+}
+
+.text-button {
+  padding: 0.2rem;
 }

@@ -6,7 +6,7 @@ const Counter2Display = () => {
   const { contextValue } = useAppContext();
   console.log("Counter2Display rendering");
 
-  return <>{contextValue.counter}</>;
+  return <>Counter: {contextValue.counter}</>;
 };
 
 export default Counter2Display;

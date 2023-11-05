@@ -38,14 +38,14 @@ const Counter1 = () => {
       <span style={{ fontWeight: "bold" }}>
         Counter1 with useState / CounterDisplay with Memo
       </span>
-      <ul>
+      <ul className="mt-01">
         <li>- memo avoids re-rendering when the parent re-renders</li>
         <li>
           - useRef maintains the value between re-renders, a variable does not
         </li>
       </ul>
-      <div style={{ margin: ".5rem 0" }}>
-        <button style={{ padding: ".1rem" }} onClick={handleShowStartTime}>
+      <div className="mt-01">
+        <button className="text-button" onClick={handleShowStartTime}>
           Show Start Time
         </button>
         {showText && (
@@ -54,28 +54,29 @@ const Counter1 = () => {
           </span>
         )}
       </div>
-      <div style={{ margin: ".5rem" }}>
+      <div className="mt-01">
         {automaticCounterValue}{" "}
         <span style={{ marginLeft: ".3rem" }}>
           //uncomment the code to start the timer...
         </span>
       </div>
-      <button
-        className="counter-button"
-        onClick={() => setCounterValue(counterValue - 1)}
-      >
-        -
-      </button>
-      <span style={{ margin: "0 .2rem" }}>
-        <Counter1Display value={counterValue} />
-      </span>
-      <button
-        className="counter-button"
-        onClick={() => setCounterValue(counterValue + 1)}
-      >
-        +
-      </button>
-      <div></div>
+      <div className="mt-01">
+        <button
+          className="counter-button"
+          onClick={() => setCounterValue(counterValue - 1)}
+        >
+          -
+        </button>
+        <span style={{ margin: "0 .2rem" }}>
+          <Counter1Display value={counterValue} />
+        </span>
+        <button
+          className="counter-button"
+          onClick={() => setCounterValue(counterValue + 1)}
+        >
+          +
+        </button>
+      </div>
     </div>
   );
 };

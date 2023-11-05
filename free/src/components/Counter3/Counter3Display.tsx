@@ -1,4 +1,4 @@
-import { useAppContext2 } from "../context/context2";
+import { useAppContext2 } from "../../context/context2";
 
 const Counter3Display = () => {
   const { counter } = useAppContext2();

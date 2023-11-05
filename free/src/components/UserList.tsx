@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { User } from "../typings/users";
 
-const Users = () => {
+const UserList = () => {
   const [users, setUsers] = useState<User[]>([]);
   const [users2, setUsers2] = useState<User[]>([]);
 
@@ -49,7 +49,7 @@ const Users = () => {
       return userList.map((user: User, index: number) => (
         <span key={index}>
           {user.name}
-          {index === userList.length - 1 ? "" : ", "}
+          {index === userList.length - 1 ? "." : ", "}
         </span>
       ));
     }
@@ -57,11 +57,13 @@ const Users = () => {
 
   return (
     <div>
-      <span style={{ fontWeight: "bold" }}>Users via HTTP</span>
-      <div style={{ margin: ".5rem 0" }}>{usersRendering(users)}</div>
-      <div>{usersRendering(users2)}</div>
+      <span style={{ fontWeight: "bold" }}>
+        Users via HTTP with and without async await
+      </span>
+      <div className="mt-01">{usersRendering(users)}</div>
+      <div className="mt-01">{usersRendering(users2)}</div>
     </div>
   );
 };
 
-export default Users;
+export default UserList;

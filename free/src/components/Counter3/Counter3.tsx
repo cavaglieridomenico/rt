@@ -1,4 +1,4 @@
-import { useAppContext2 } from "../context/context2";
+import { useAppContext2 } from "../../context/context2";
 
 const Counter3 = () => {
   const { handleIncrement, handleDecrement } = useAppContext2();
@@ -10,11 +10,13 @@ const Counter3 = () => {
       <span style={{ fontWeight: "bold" }}>
         Counter3 with useReducer via context
       </span>
-      <div style={{ margin: ".5rem" }}>
-        <button style={{ marginRight: ".5rem" }} onClick={handleDecrement}>
+      <div>
+        <button className="counter-button" onClick={handleDecrement}>
           -
         </button>
-        <button onClick={handleIncrement}>+</button>
+        <button className="counter-button" onClick={handleIncrement}>
+          +
+        </button>
       </div>
     </div>
   );

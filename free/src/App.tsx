@@ -32,9 +32,6 @@ function App() {
           </Routes>
           {/* <TodoList2 />
           <hr />
-          <Counter3 />
-          <Counter3Display />
-          <hr />
           <TodoList />
           <hr />
           <Counter2 />

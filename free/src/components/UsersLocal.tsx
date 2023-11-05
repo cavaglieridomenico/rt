@@ -53,22 +53,28 @@ const UsersLocal = () => {
   return (
     <>
       <div>
-        <span style={{ fontWeight: "bold" }}>UserLocal via import module</span>
+        <span style={{ fontWeight: "bold" }}>
+          Users via import local module with and without async await
+        </span>
         <div style={{ marginTop: ".5rem" }}>
-          <button style={{ margin: ".2rem" }} onClick={handleUsersLocal1}>
+          <button className="text-button" onClick={handleUsersLocal1}>
             Load UsersLocal
           </button>
-          <button onClick={removeUsersLocal1}>Remove UsersLocal</button>
+          <button className="text-button ml-01" onClick={removeUsersLocal1}>
+            Remove UsersLocal
+          </button>
         </div>
         {showUsersLocal1 ? userRendering(UsersLocal) : <></>}
       </div>
       <br />
       <div>
         <div>
-          <button style={{ margin: ".2rem" }} onClick={handleUser2}>
+          <button className="text-button" onClick={handleUser2}>
             Load UsersLocal
           </button>
-          <button onClick={removeUsersLocal2}>Remove UsersLocal</button>
+          <button className="text-button ml-01" onClick={removeUsersLocal2}>
+            Remove UsersLocal
+          </button>
         </div>
         {showUsersLocal2 ? userRendering(UsersLocal2) : <></>}
       </div>
