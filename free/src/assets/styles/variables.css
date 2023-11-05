@@ -2,4 +2,7 @@
   --primaryColor: yellowgreen;
   --secondaryColor: aqua;
   --mainPadding: 0.5rem;
+  @media (min-width: 1024px) {
+    --mainPadding: 0.5rem 16vw;
+  }
 }
