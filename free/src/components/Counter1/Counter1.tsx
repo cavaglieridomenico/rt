@@ -7,9 +7,11 @@ const Counter1 = () => {
   const [showText, setShowText] = useState(false);
   const startDate = useRef<string | null>(null);
   let time = "init";
-  const handleStartTime = () => {
+  useEffect(() => {
     time = new Date().toLocaleTimeString();
     startDate.current = new Date().toLocaleTimeString();
+  }, []);
+  const handleShowStartTime = () => {
     setShowText(true);
     setTimeout(() => setShowText(false), 4000);
   };
@@ -43,8 +45,8 @@ const Counter1 = () => {
         </li>
       </ul>
       <div style={{ margin: ".5rem 0" }}>
-        <button style={{ padding: ".1rem" }} onClick={handleStartTime}>
-          Show times
+        <button style={{ padding: ".1rem" }} onClick={handleShowStartTime}>
+          Show Start Time
         </button>
         {showText && (
           <span style={{ margin: ".5rem" }}>
