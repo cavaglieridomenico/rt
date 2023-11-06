@@ -8,6 +8,7 @@ import Counters from "./pages/Counters";
 import Users from "./pages/Users";
 import TodoLists from "./pages/TodoLists";
 import NotFound from "./pages/NotFound";
+import Games from "./pages/Games";
 // import Users from "./components/Users";
 // import Counter1 from "./components/Counter1";
 // import UsersLocal from "./components/UsersLocal";
@@ -29,6 +30,7 @@ function App() {
               <Route path="counters" element={<Counters />} />
               <Route path="users" element={<Users />} />
               <Route path="todolists" element={<TodoLists />} />
+              <Route path="/games" element={<Games />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>

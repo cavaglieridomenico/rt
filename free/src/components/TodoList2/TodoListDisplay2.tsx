@@ -2,7 +2,6 @@ import type {
   ToDoListDisplayProps,
   TodoListItem,
 } from "../../typings/todo-list";
-import style from "./todo-list.module.css";
 
 const TodoListLDisplay2 = ({
   todoList,
