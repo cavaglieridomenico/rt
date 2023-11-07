@@ -3,12 +3,9 @@ import type { SquareProps } from "../../typings/tic-tac-toe.d";
 
 const Square = ({ value, onSquareClick }: SquareProps) => {
   return (
-    <input
-      type="button"
-      value={value}
-      className={style.square}
-      onClick={onSquareClick}
-    ></input>
+    <button type="button" className={style.square} onClick={onSquareClick}>
+      {value}
+    </button>
   );
 };
 
