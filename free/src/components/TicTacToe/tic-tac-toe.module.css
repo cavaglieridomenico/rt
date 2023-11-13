@@ -18,3 +18,24 @@
   padding-top: 0.5rem;
   cursor: pointer;
 }
+
+.winnerTextWrapper {
+  height: 2.5rem;
+  .winnerText {
+    background-color: lightcoral;
+    width: fit-content;
+    padding: 0.3rem 0.5rem;
+    color: white;
+  }
+}
+
+.gameWrapper {
+  display: flex;
+  gap: 2rem;
+  height: 270px;
+}
+
+.buttonGameMovement {
+  padding: 0.2rem;
+  margin-bottom: 0.1rem;
+}
