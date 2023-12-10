@@ -44,12 +44,7 @@ const TicTacToe = () => {
     }
 
     setHistory((prevState: any) => {
-      let newMovementList = [...prevState];
-      newMovementList.splice(
-        historyIndex + 1,
-        newMovementList.length - historyIndex
-      );
-      newMovementList.push(newList);
+      let newMovementList = [...prevState.slice(0, historyIndex + 1), newList];
       setHistoryIndex(newMovementList.length - 1);
       return newMovementList;
     });
