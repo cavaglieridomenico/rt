@@ -22,6 +22,12 @@ const Header = () => {
         <li className={style.navItem} onClick={() => navigate("/games")}>
           Games
         </li>
+        <li
+          className={style.navItem}
+          onClick={() => navigate("/searchble-data")}
+        >
+          SearchbleData
+        </li>
       </ul>
     </div>
   );

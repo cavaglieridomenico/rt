@@ -1,0 +1,32 @@
+.productTableContainer {
+  padding-left: 1rem;
+  max-width: 300px;
+}
+
+.onlyInStock {
+  margin: 0 0.4rem;
+}
+
+.checkboxStock {
+  margin-top: 0.3rem;
+}
+
+.tableLabel {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1rem 0;
+  padding-right: 3.5rem;
+  font-weight: var(--bolt);
+}
+
+.categoryName {
+  display: flex;
+  justify-content: center;
+  padding-right: 2rem;
+  font-weight: var(--bolt);
+}
+
+.productRow {
+  display: grid;
+  grid-template-columns: 48% auto;
+}

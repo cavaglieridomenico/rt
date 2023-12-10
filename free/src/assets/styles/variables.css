@@ -4,6 +4,7 @@
   --mainPadding: 0.5rem;
   --mt01: 0.5rem;
   --ml01: 0.2rem;
+  --bolt: 700;
   @media (min-width: 1024px) {
     --mainPadding: 0.5rem 16vw;
   }
