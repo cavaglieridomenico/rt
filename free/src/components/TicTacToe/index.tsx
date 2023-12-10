@@ -33,15 +33,7 @@ const TicTacToe = () => {
       getTictactoeWinner(history[historyIndex])
     )
       return;
-    setHistory((prevState: any) => {
-      let newMovementList = [...prevState];
-      newMovementList.splice(
-        historyIndex + 1,
-        newMovementList.length - historyIndex
-      );
-      setHistoryIndex(newMovementList.length - 1);
-      return newMovementList;
-    });
+
     let newList = [...history[historyIndex]];
     if (isTurnX) {
       newList[index] = "X";
@@ -50,8 +42,13 @@ const TicTacToe = () => {
     } else {
       return;
     }
+
     setHistory((prevState: any) => {
       let newMovementList = [...prevState];
+      newMovementList.splice(
+        historyIndex + 1,
+        newMovementList.length - historyIndex
+      );
       newMovementList.push(newList);
       setHistoryIndex(newMovementList.length - 1);
       return newMovementList;
