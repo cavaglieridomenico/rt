@@ -1,8 +1,13 @@
 import style from "../style.module.css";
-const ProductCategoryRow = () => {
+
+type ProductCategoryRowProps = {
+  categoryName: string;
+};
+
+const ProductCategoryRow = ({ categoryName }: ProductCategoryRowProps) => {
   return (
     <div className={style.categoryName}>
-      <p>Category Name</p>
+      <p>{categoryName}</p>
     </div>
   );
 };
