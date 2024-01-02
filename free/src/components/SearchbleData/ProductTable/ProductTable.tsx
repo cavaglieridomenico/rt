@@ -27,16 +27,6 @@ const ProductTable = () => {
         <p>Price</p>
       </div>
       {rows}
-      {/* {productList.map((item: Product, index: number) => {
-        return (
-          <div key={index}>
-            <ProductCategoryRow categoryName={item.category} />
-            <div>
-              <ProductRow {...item} />
-            </div>
-          </div>
-        );
-      })} */}
     </div>
   );
 };
