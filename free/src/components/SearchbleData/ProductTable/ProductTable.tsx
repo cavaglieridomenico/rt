@@ -13,13 +13,11 @@ const ProductTable = () => {
       rows.push(
         <div>
           <ProductCategoryRow categoryName={item.category} />
-          <ProductRow {...item} />
         </div>
       );
-      lastCategory = item.category;
-      return;
     }
     rows.push(<ProductRow {...item} />);
+    lastCategory = item.category;
   });
 
   return (
