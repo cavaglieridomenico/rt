@@ -1,10 +1,14 @@
 import ProductCategoryRow from "./ProductCategoryRow";
 import ProductRow from "./ProductRow";
 import style from "../style.module.css";
-import productList from "../../../utils/searchbleDataList";
+// import productList from "../../../utils/searchbleDataList";
 import { Product } from "../../../utils/searchbleDataList";
 
-const ProductTable = () => {
+type ProductTableProps = {
+  productList: Product[];
+};
+
+const ProductTable = ({ productList }: ProductTableProps) => {
   const rows: any[] = [];
   let lastCategory: any = null;
 
