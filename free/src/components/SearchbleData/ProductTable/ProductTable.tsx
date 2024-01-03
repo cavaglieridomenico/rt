@@ -6,22 +6,36 @@ import { Product } from "../../../utils/searchbleDataList";
 
 type ProductTableProps = {
   productList: Product[];
+  filterText: string;
+  inStockOnly: boolean;
 };
 
-const ProductTable = ({ productList }: ProductTableProps) => {
+const ProductTable = ({
+  productList,
+  filterText,
+  inStockOnly,
+}: ProductTableProps) => {
   const rows: any[] = [];
   let lastCategory: any = null;
 
-  productList.forEach((item: Product) => {
-    if (lastCategory !== item.category) {
+  productList.forEach((product: Product) => {
+    if (product.name.toLowerCase().indexOf(filterText.toLowerCase()) === -1) {
+      return;
+    }
+
+    if (inStockOnly && !product.stocked) {
+      return;
+    }
+
+    if (lastCategory !== product.category) {
       rows.push(
         <div>
-          <ProductCategoryRow categoryName={item.category} />
+          <ProductCategoryRow categoryName={product.category} />
         </div>
       );
     }
-    rows.push(<ProductRow {...item} />);
-    lastCategory = item.category;
+    rows.push(<ProductRow {...product} />);
+    lastCategory = product.category;
   });
 
   return (
