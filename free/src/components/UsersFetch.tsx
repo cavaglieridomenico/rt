@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { User } from "../typings/users";
+import React from "react";
 
 const UsersFetch = () => {
   const [users, setUsers] = useState<User[]>([]);
@@ -62,6 +63,20 @@ const UsersFetch = () => {
       </span>
       <div className="mt-01">{usersRendering(users)}</div>
       <div className="mt-01">{usersRendering(users2)}</div>
+      <div className="mt-01">
+        <p>
+          <u>
+            <i>Render using</i> <b>React.Children.toArray():</b>
+          </u>
+        </p>
+        {React.Children.toArray(
+          users.map((item, index) => (
+            <span>
+              {item.name} {index === users.length - 1 ? "." : ", "}
+            </span>
+          ))
+        )}
+      </div>
     </div>
   );
 };
