@@ -83,3 +83,7 @@ ul {
     cursor: pointer;
   }
 }
+
+.custom-button {
+  padding: 1rem;
+}
