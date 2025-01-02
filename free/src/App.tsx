@@ -10,15 +10,6 @@ import TodoLists from "./pages/TodoLists";
 import NotFound from "./pages/NotFound";
 import Games from "./pages/Games";
 import SearchbleData from "./pages/SearchbleData";
-// import Users from "./components/Users";
-// import Counter1 from "./components/Counter1";
-// import UsersLocal from "./components/UsersLocal";
-// import Display from "./components/Counter2Display";
-// import Counter2 from "./components/Counter2";
-// import TodoList from "./components/TodoList";
-// import Counter3 from "./components/Counter3";
-// import Counter3Display from "./components/Counter3Display";
-// import TodoList2 from "./components/TodoList2";
 
 function App() {
   return (
@@ -33,7 +24,7 @@ function App() {
               <Route path="todolists" element={<TodoLists />} />
               <Route path="games" element={<Games />} />
               <Route path="searchble-data" element={<SearchbleData />} />
-              <Route path="*" element={<NotFound />} />R
+              <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
         </AppContext1Provider>

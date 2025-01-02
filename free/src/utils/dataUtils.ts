@@ -9,3 +9,6 @@ export const getUserData = () => {
     }
   });
 };
+
+export const timeout = (delayime: number) =>
+  new Promise((resolve) => setTimeout(resolve, delayime));

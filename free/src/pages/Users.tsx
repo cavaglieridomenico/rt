@@ -1,5 +1,5 @@
-import UsersFetch from "../components/UsersFetch";
-import UsersLocal from "../components/UsersLocal";
+import UsersFetch from "../components/Users/UsersFetch";
+import UsersLocal from "../components/Users/UsersLocal/UsersLocal";
 
 const Users = () => {
   return (
