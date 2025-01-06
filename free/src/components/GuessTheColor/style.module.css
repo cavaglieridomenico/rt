@@ -1,0 +1,34 @@
+.guessTheColorContainer {
+    min-height: 520px;
+}
+
+.squareColor {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border: solid 1px black;
+    margin: 1rem auto;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.colorButton {
+    margin-right: 1rem;
+}
+
+.textContainer {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    padding: 3rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: red;
+}
+
+.winText {
+    color: lightgreen;
+    background-color: chocolate;
+}

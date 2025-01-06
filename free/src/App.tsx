@@ -10,6 +10,8 @@ import TodoLists from "./pages/TodoLists";
 import NotFound from "./pages/NotFound";
 import Games from "./pages/Games";
 import SearchbleData from "./pages/SearchbleData";
+import Props from "./pages/Props";
+import Challenges from "./pages/Challenges";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
               <Route path="todolists" element={<TodoLists />} />
               <Route path="games" element={<Games />} />
               <Route path="searchble-data" element={<SearchbleData />} />
+              <Route path="props" element={<Props />} />
+              <Route path="challenges" element={<Challenges />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
